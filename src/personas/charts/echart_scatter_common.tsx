@@ -74,7 +74,7 @@ const EChartsChart: React.FC<EChartsChartProps> = ({
         },
       ],
       visualMap: {
-        top: 50,
+        top: 40,
         right: 10,
         pieces: [
           {
