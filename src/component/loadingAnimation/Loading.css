@@ -1,0 +1,7 @@
+.battery-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  aspect-ratio: "0.23";
+}
