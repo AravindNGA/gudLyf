@@ -9,6 +9,7 @@ import { useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 
 import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from "@mui/material";
 
 const LoginPage = () => {
   let navigate = useNavigate();
@@ -102,15 +103,33 @@ const LoginPage = () => {
             </span>
           </span>
           <div className="login-container2"></div>
-          <button className="login-button2 button" onClick={handleClickAuth0}>
+          <br />
+          <Button
+            variant="contained"
+            className="login-button2 button"
+            onClick={handleClickAuth0}
+            style={{ textTransform: "none" }}
+          >
             Continue with Nexus Login
-          </button>
-          <button className="login-button2 button" onClick={handleClick}>
-            Continue with Google Login
-          </button>
-          <button className="login-button2 button">
-            Continue with Microsoft Login
-          </button>
+          </Button>
+          <br />
+          <Button
+            variant="contained"
+            className="login-button2 button"
+            onClick={handleClick}
+            style={{ textTransform: "none" }}
+          >
+            Continue with Google
+          </Button>
+          <br />
+          <Button
+            variant="contained"
+            className="login-button2 button"
+            style={{ textTransform: "none" }}
+          >
+            Continue with Microsoft
+          </Button>
+          <br />
         </div>
         <footer className="login-footer">
           <span className="login-text4">

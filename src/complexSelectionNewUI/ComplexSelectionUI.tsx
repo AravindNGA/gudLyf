@@ -2,7 +2,14 @@ import "../complexSelectionNewUI/ComplexSelectionUI.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
-import { Snackbar } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Snackbar,
+} from "@mui/material";
 import { batteryDataDBName } from "../commonItems";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../Login/config";
@@ -105,7 +112,8 @@ const ComplexSelection = () => {
             <span>{fromPersonaTitle}</span>
           </h1>
           <h4 className="complex-selection-text17">{fromPersonaQuote}</h4>
-          <span className="complex-selection-text17">Cell Manufacturer</span>
+          {/* <span className="complex-selection-text17">Cell Manufacturer</span>
+
           <select
             className="complex-selection-select"
             value={dropdownCellManu}
@@ -132,8 +140,40 @@ const ComplexSelection = () => {
             <option value="BlueSolutions">Blue Solutions</option>
             <option value="BSTPower">BST Power</option>
             <option value="BYD">BYD</option>
-          </select>
-          <span className="complex-selection-text18">Type of Vehicle</span>
+          </select> */}
+
+          <br />
+
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-autowidth-label">
+              Cell Manufacturer
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-autowidth-label"
+              id="demo-simple-select-autowidth"
+              value={dropdownCellManu}
+              onChange={handleDropdown1Change}
+              label="Cell Manufacturer"
+            >
+              <MenuItem value={"Altairnano"}>Altairnano</MenuItem>
+              <MenuItem value={"American Battery Factory"}>
+                American Battery Factory
+              </MenuItem>
+              <MenuItem value={"Amprius"}>Amprius</MenuItem>
+              <MenuItem value={"AMTE Power"}>AMTE Power</MenuItem>
+              <MenuItem value={"Aspilsan Energy"}>Aspilsan Energy</MenuItem>
+              <MenuItem value={"ATL"}>ATL</MenuItem>
+              <MenuItem value={"ATLIS"}>ATLIS</MenuItem>
+              <MenuItem value={"BAK Energy"}>BAK Energy</MenuItem>
+              <MenuItem value={"BasqueVolt"}>BasqueVolt</MenuItem>
+              <MenuItem value={"Beyonder"}>Beyonder</MenuItem>
+              <MenuItem value={"Blue Solutions"}>Blue Solutions</MenuItem>
+              <MenuItem value={"BST Power"}>BST Power</MenuItem>
+              <MenuItem value={"BYD"}>BYD</MenuItem>
+            </Select>
+          </FormControl>
+
+          {/* <span className="complex-selection-text18">Type of Vehicle</span>
           <select
             className="complex-selection-select1"
             value={dropdownTypeOfVehicle}
@@ -146,8 +186,31 @@ const ComplexSelection = () => {
             <option value="Industrial">Industrial</option>
             <option value="Drone">Drone</option>
             <option value="Stationary">Stationary</option>
-          </select>
-          <span className="complex-selection-text19">Cell Chemistry</span>
+          </select> */}
+
+          <br />
+
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-autowidth-label">
+              Type of Vehicle
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-autowidth-label"
+              id="demo-simple-select-autowidth"
+              value={dropdownTypeOfVehicle}
+              onChange={handleDropdown2Change}
+              label="Type of Vehicle"
+            >
+              <MenuItem value={"2 Wheelers"}>2 Wheelers</MenuItem>
+              <MenuItem value={"3 Wheelers"}>3 Wheelers</MenuItem>
+              <MenuItem value={"Passenger Car"}>Passenger car</MenuItem>
+              <MenuItem value={"Industrial"}>Industrial</MenuItem>
+              <MenuItem value={"Drone"}>Drone</MenuItem>
+              <MenuItem value={"Stationary"}>Stationary</MenuItem>
+            </Select>
+          </FormControl>
+
+          {/* <span className="complex-selection-text19">Cell Chemistry</span>
           <select
             className="complex-selection-select2"
             value={dropdownCellChemistry}
@@ -160,8 +223,31 @@ const ComplexSelection = () => {
             <option value="4LMFP">4LMFP</option>
             <option value="Na-Ion">Na-Ion</option>
             <option value="SolidState">Solid State</option>
-          </select>
-          <span className="complex-selection-text20">Type of Cell</span>
+          </select> */}
+
+          <br />
+
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-autowidth-label">
+              Cell Chemistry
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-autowidth-label"
+              id="demo-simple-select-autowidth"
+              value={dropdownCellChemistry}
+              onChange={handleDropdown3Change}
+              label="Cell Chemistry"
+            >
+              <MenuItem value={"LFP"}>LFP</MenuItem>
+              <MenuItem value={"NMC"}>NMC</MenuItem>
+              <MenuItem value={"NCA"}>NCA</MenuItem>
+              <MenuItem value={"4LMFP"}>4LMFP</MenuItem>
+              <MenuItem value={"Na-Ion"}>Na-Ion</MenuItem>
+              <MenuItem value={"SolidState"}>Solid State</MenuItem>
+            </Select>
+          </FormControl>
+
+          {/* <span className="complex-selection-text20">Type of Cell</span>
           <select
             className="complex-selection-select3"
             value={dropdownTypeOfCell}
@@ -171,13 +257,36 @@ const ComplexSelection = () => {
             <option value="Cylinderical">Cylinderical</option>
             <option value="Prismatic">Prismatic</option>
             <option value="Pouch">Pouch</option>
-          </select>
-          <button
+          </select> */}
+
+          <br />
+
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-autowidth-label">
+              Type of Cell
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-autowidth-label"
+              id="demo-simple-select-autowidth"
+              value={dropdownTypeOfCell}
+              onChange={handleDropdown4Change}
+              label="Type of Cell"
+            >
+              <MenuItem value={"Cylinderical"}>Cylinderical</MenuItem>
+              <MenuItem value={"Prismatic"}>Prismatic</MenuItem>
+              <MenuItem value={"Pouch"}>Pouch</MenuItem>
+            </Select>
+          </FormControl>
+
+          <br />
+
+          <Button
+            variant="contained"
             className="complex-selection-button3 button"
             onClick={jumpingToNextpage}
           >
             Confirm my selections
-          </button>
+          </Button>
         </div>
         <img
           alt="image"
