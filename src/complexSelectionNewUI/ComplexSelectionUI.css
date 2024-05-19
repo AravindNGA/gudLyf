@@ -6,6 +6,7 @@
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
+    background-color: #EEF9F9;
   }
   .complex-selection-navbar {
     box-shadow: 5px 5px 10px 0px #d4d4d4;
@@ -250,8 +251,8 @@
     transform: scale(1.02);
   }
   .complex-selection-image2 {
-    width: 445px;
-    height: 640px;
+    width: 400px;
+    height: 600px;
     align-self: center;
     object-fit: cover;
     border-radius: 16px;

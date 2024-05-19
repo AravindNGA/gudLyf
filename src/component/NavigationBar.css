@@ -13,9 +13,9 @@
     margin-top: 32px;
     transition: 0.3s;
     border-width: 0px;
-    padding-left: var(--dl-space-space-unit);
-    border-radius: var(--dl-radius-radius-radius4);
-    padding-right: var(--dl-space-space-unit);
+    padding-left: 16px;
+    border-radius: 4px;
+    padding-right: 16px;
     background-color: #008975;
   }
   .submit-button2:hover {

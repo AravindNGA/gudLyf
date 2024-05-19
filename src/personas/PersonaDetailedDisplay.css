@@ -6,6 +6,7 @@
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
+    background-color: #EEF9F9;
   }
   .value-display-container1 {
     flex: 0 0 auto;

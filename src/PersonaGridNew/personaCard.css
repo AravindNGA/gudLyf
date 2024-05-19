@@ -1,59 +1,56 @@
-.persona-card-testimonial-card {
+.persona-card1-testimonial-card {
   display: flex;
   padding: 32px;
   max-width: 1400px;
   transition: 0.3s;
   align-items: center;
-
-  border: 1px solid #eeeeee;
+  
+  border: 1px solid #e6e6e6;
   border-radius: 8px;
   flex-direction: column;
   justify-content: space-between;
   background-color: #FFF;
 }
-.persona-card-testimonial-card:hover {
-  border: 1px solid #e0e0e0;
-  background-color: #f5f5f5;
+.persona-card1-testimonial-card:hover {
+
+  border: 1px solid #42acc9;
+  background-color: #EEF9F9;
 }
-.persona-card-testimonial {
+.persona-card1-testimonial {
   display: flex;
   align-items: center;
   border-radius: 4px;
   flex-direction: column;
   justify-content: space-between;
 }
-.persona-card-image {
-  width: 200px;
-  height: 200px;
+.persona-card1-container {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  padding: 0px;
+  align-items: flex-start;  
+}
+.persona-card1-image {
+  width: 100px;
+  height: 100px;
+  align-self: flex-start;
   object-fit: scale-down;
-  border-radius: 50%;
+  border-radius: 25%;
 }
-.persona-card-text {
+.persona-card1-text {
   font-size: 1.5rem;
+  align-self: center;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 16px;
+
+}
+.persona-card1-text1 {
   margin-top: 16px;
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 8px;
+  text-align: left;
+  line-height: 1.5;
+  margin-bottom: 0px;
 }
-.persona-card-text1 {
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -64,27 +61,27 @@
 
 
 @media(max-width: 767px) {
-  .persona-card-testimonial-card {
+  .persona-card1-testimonial-card {
     padding: 32px;
     box-shadow: 5px 5px 10px 0px rgba(97, 97, 97, 0.1);
   }
 }
 @media(max-width: 479px) {
-  .persona-card-testimonial-card {
+  .persona-card1-testimonial-card {
     box-shadow: 5px 5px 10px 0px rgba(97, 97, 97, 0.1);
     padding-top: 32px;
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 32px;
   }
-  .persona-card-text {
+  .persona-card1-text {
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
     margin-bottom: 8px;
   }
-  .persona-card-text1 {
+  .persona-card1-text1 {
     font-size: 0.75rem;
-    margin-bottom: 32px;
+    margin-bottom: 0px;
   }
 }

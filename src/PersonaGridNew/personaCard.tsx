@@ -16,15 +16,29 @@ const PersonaCard = (props: {
     navigate("/ComplexSelectionCriteria", { state: pathTransfer });
   };
   return (
-    <div className={`persona-card-testimonial-card ${props.rootClassName} `}>
-      <div className="persona-card-testimonial" onClick={onPersonaClicker}>
-        <img
-          alt="profile"
-          src={props.pictureSrc}
-          className="persona-card-image"
-        />
-        <span className="persona-card-text">{props.name}</span>
-        <span className="persona-card-text1">{props.quote}</span>
+    // <div className={`persona-card1-testimonial-card ${props.rootClassName} `}>
+    //   <div className="persona-card1-testimonial" onClick={onPersonaClicker}>
+    //     <img
+    //       alt="profile"
+    //       src={props.pictureSrc}
+    //       className="persona-card1-image"
+    //     />
+    //     <span className="persona-card1-text">{props.name}</span>
+    //     <span className="persona-card1-text1">{props.quote}</span>
+    //   </div>
+    // </div>
+
+    <div className={`persona-card1-testimonial-card ${props.rootClassName} `}>
+      <div className="persona-card1-testimonial" onClick={onPersonaClicker}>
+        <div className="persona-card1-container">
+          <img
+            alt="profile"
+            src={props.pictureSrc}
+            className="persona-card1-image"
+          />
+          <span className="persona-card1-text">{props.name}</span>
+        </div>
+        <span className="persona-card1-text1">{props.quote}</span>
       </div>
     </div>
   );

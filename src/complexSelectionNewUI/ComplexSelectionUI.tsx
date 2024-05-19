@@ -103,8 +103,7 @@ const ComplexSelection = () => {
     <div className="complex-selection-container">
       <NavigationBar />
       <br />
-      <br />
-      <br />
+
       <br />
       <div className="complex-selection-hero">
         <div className="complex-selection-container1">
@@ -272,7 +271,7 @@ const ComplexSelection = () => {
               onChange={handleDropdown4Change}
               label="Type of Cell"
             >
-              <MenuItem value={"Cylinderical"}>Cylinderical</MenuItem>
+              <MenuItem value={"Cylindrical"}>Cylindrical</MenuItem>
               <MenuItem value={"Prismatic"}>Prismatic</MenuItem>
               <MenuItem value={"Pouch"}>Pouch</MenuItem>
             </Select>
@@ -298,7 +297,7 @@ const ComplexSelection = () => {
         open={open}
         autoHideDuration={6000}
         onClose={handleClose}
-        message="Input Selections missing"
+        message="Some of the Input Selections are missing"
       />
     </div>
   );
