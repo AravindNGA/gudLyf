@@ -113,17 +113,17 @@ const PersonaGridView = () => {
               <div className="persona-grid-view-container5">
                 <StatisticsCard
                   rootClassName="statistics-card-root-class-name"
-                  count="16"
+                  count="50"
                   desc="Our collaborations extend to different battery manufacturers, ensuring a diverse range of expertise and resources."
                 ></StatisticsCard>
                 <StatisticsCard
                   rootClassName="statistics-card-root-class-name3"
-                  count="6"
-                  desc="Our technologies are deployed across 6 diverse applications, demonstrating versatility and adaptability in meeting unique industry needs."
+                  count="10"
+                  desc="Our technologies are deployed across diverse applications, demonstrating versatility and adaptability in meeting unique industry needs."
                 ></StatisticsCard>
                 <StatisticsCard
                   rootClassName="statistics-card-root-class-name2"
-                  count="6"
+                  count="10"
                   desc="Our solutions encompass different types of cell chemistry, offering flexibility and optimization for various power requirements and environmental conditions."
                 ></StatisticsCard>
                 <StatisticsCard
