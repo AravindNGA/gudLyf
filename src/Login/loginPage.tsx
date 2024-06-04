@@ -3,8 +3,9 @@ import { Helmet } from "react-helmet";
 import "../Login/loginPage.css";
 import { useNavigate } from "react-router-dom";
 
-import { authGGl, db, dbName, provider } from "./config";
-import { signInWithPopup } from "firebase/auth";
+import { db, dbName } from "./config";
+//import { authGGl, provider } from "./config";
+//import { signInWithPopup } from "firebase/auth";
 import { useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 
@@ -14,9 +15,11 @@ import { Button } from "@mui/material";
 const LoginPage = () => {
   let navigate = useNavigate();
   const [value, setEmailValue] = useState("");
+  console.log(value);
 
   const { loginWithPopup, isAuthenticated, user } = useAuth0();
 
+  // nexus login
   const handleClickAuth0 = () => {
     loginWithPopup().then(async () => {
       if (isAuthenticated) {
@@ -44,31 +47,33 @@ const LoginPage = () => {
       }
     });
   };
-  const handleClick = () => {
-    signInWithPopup(authGGl, provider)
-      .then(async (data) => {
-        if (data.user.email != null) {
-          setEmailValue(data.user.email);
-          let email = [data.user.email, data.user.uid];
-          const docRef = doc(db, dbName, data.user.uid);
-          const docSnap = await getDoc(docRef);
 
-          if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
-            navigate("/personaGridNew");
-          } else {
-            // docSnap.data() will be undefined in this case
-            console.log("No such document!");
-            navigate("/RegistrationPage", { state: email });
-          }
+  // Google login
+  // const handleClick = () => {
+  //   signInWithPopup(authGGl, provider)
+  //     .then(async (data) => {
+  //       if (data.user.email != null) {
+  //         setEmailValue(data.user.email);
+  //         let email = [data.user.email, data.user.uid];
+  //         const docRef = doc(db, dbName, data.user.uid);
+  //         const docSnap = await getDoc(docRef);
 
-          console.log(value);
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  //         if (docSnap.exists()) {
+  //           console.log("Document data:", docSnap.data());
+  //           navigate("/personaGridNew");
+  //         } else {
+  //           // docSnap.data() will be undefined in this case
+  //           console.log("No such document!");
+  //           navigate("/RegistrationPage", { state: email });
+  //         }
+
+  //         console.log(value);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <div className="login-page-container">
@@ -110,18 +115,18 @@ const LoginPage = () => {
             onClick={handleClickAuth0}
             style={{ textTransform: "none" }}
           >
-            Continue with Nexus Login
+            Continue with Google
           </Button>
           <br />
-          <Button
+          {/* <Button
             variant="contained"
             className="login-button2 button"
             onClick={handleClick}
             style={{ textTransform: "none" }}
           >
             Continue with Google
-          </Button>
-          <br />
+          </Button> */}
+
           <Button
             variant="contained"
             className="login-button2 button"

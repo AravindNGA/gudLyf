@@ -14,12 +14,13 @@ export const Auth0ProviderWithHistory = ({
 
   return (
     <Auth0Provider
-      domain={"https://auth.sit.nexus.hexagon.com"}
-      // clientId={"gxg5kZgcDFydHVhnpjuyoL8cPecvI1b0"}
-      clientId={"Zq8A3Sa7J6GrbkJekRjpNHl9cmcw8qTI"}
+      //domain={"https://auth.sit.nexus.hexagon.com"}
+      domain={"dev-81fcd14keoj7aet3.us.auth0.com"}
+      //clientId={"Zq8A3Sa7J6GrbkJekRjpNHl9cmcw8qTI"}
+      clientId={"8krMJ5VdVZLsEx6GF6Izv6Sv10oNck5X"}
       redirectUri={basePath}
       onRedirectCallback={onRedirectCallback}
-      audience={"https://nexus.hexagon.com/contentcatalogue"}
+      //audience={"https://nexus.hexagon.com/contentcatalogue"}
     >
       {children}
     </Auth0Provider>
